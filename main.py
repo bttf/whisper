@@ -1,10 +1,11 @@
 import argparse
 import whisper
+import json
 
 def main(video_path):
     model = whisper.load_model('base')
     result = model.transcribe(video_path)
-    print(result['segments'])
+    print(json.dumps(result, indent=2))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Transcribe a video file.')
