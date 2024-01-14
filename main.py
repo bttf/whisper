@@ -1,10 +1,8 @@
 import argparse
 import whisper
 import json
-import sys
 import multiprocessing
 import builtins
-import functools
 
 # Force flushing of print statemets to stdout for real-time logging
 original_print = builtins.print
