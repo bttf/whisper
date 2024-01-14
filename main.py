@@ -3,10 +3,23 @@ import whisper
 import json
 import sys
 import multiprocessing
+import builtins
+import functools
+
+# Force flushing of print statemets to stdout for real-time logging
+original_print = builtins.print
+
+def flushed_print(*args, **kwargs):
+    kwargs['flush'] = True  # Force flushing
+    original_print(*args, **kwargs)
+
+builtins.print = flushed_print
 
 def main(video_path, out_file):
     model = whisper.load_model('base')
+    print ('Now transcribing the video', flush=True)
     result = model.transcribe(video_path, verbose=True)
+    print('Transcription complete', flush=True)
     with open(out_file, 'w') as f:
         json.dump(result, f, indent=2)
 
