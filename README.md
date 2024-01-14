@@ -20,7 +20,7 @@ $ pip install -r requirements.txt
 3. run script
 
 ```
-$ python main.py ./test-video.mkv
+$ python main.py ./test-video.mkv ./output.json
 ```
 
 ## packaging with pyinstaller
@@ -34,5 +34,5 @@ $ pyinstaller main.spec
 however, if that doesn't work, this is the original command:
 
 ```
-pyinstaller --onefile --add-data './venv/lib/python3.11/site-packages/whisper/assets:whisper/assets' main.py
+pyinstaller -D --add-data './venv/lib/python3.11/site-packages/whisper/assets:whisper/assets' main.py
 ```
