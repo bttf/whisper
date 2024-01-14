@@ -4,7 +4,7 @@ import json
 
 def main(video_path):
     model = whisper.load_model('base')
-    result = model.transcribe(video_path)
+    result = model.transcribe(video_path, verbose=True)
     print(json.dumps(result, indent=2))
 
 if __name__ == "__main__":
