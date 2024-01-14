@@ -25,7 +25,7 @@ $ python main.py ./test-video.mkv
 
 ## packaging with pyinstaller
 
-should be able to run just the following:
+after running steps 1. and 2. above, run the following:
 
 ```
 $ pyinstaller main.spec
