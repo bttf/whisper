@@ -1,6 +1,6 @@
 # adnan's whisper implementation
 
-binary provided in [releases](https://github.com/bttf/whispering/releases) (only provided for apple silicon; I can only build for the platform I'm using with pyinstaller :/)
+binary provided (for apple silicon) in [releases](https://github.com/bttf/whispering/releases)
 
 ## steps to build and run locally
 
